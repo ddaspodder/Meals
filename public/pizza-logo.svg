@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="crustGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD798"/>
+      <stop offset="100%" stop-color="#F1AB50"/>
+    </linearGradient>
+    <linearGradient id="sauceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B4A"/>
+      <stop offset="100%" stop-color="#E63C2E"/>
+    </linearGradient>
+    <radialGradient id="cheeseGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE57F"/>
+      <stop offset="100%" stop-color="#FFB636"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Pizza base/crust -->
+  <circle cx="256" cy="256" r="240" fill="url(#crustGrad)" stroke="#E8A246" stroke-width="8"/>
+  
+  <!-- Sauce layer -->
+  <circle cx="256" cy="256" r="220" fill="url(#sauceGrad)"/>
+  
+  <!-- Cheese layer -->
+  <circle cx="256" cy="256" r="210" fill="url(#cheeseGrad)"/>
+  
+  <!-- Pepperoni -->
+  <g fill="#D62828">
+    <circle cx="180" cy="150" r="25"/>
+    <circle cx="320" cy="170" r="25"/>
+    <circle cx="200" cy="300" r="25"/>
+    <circle cx="350" cy="280" r="25"/>
+    <circle cx="256" cy="220" r="25"/>
+  </g>
+  
+  <!-- Basil leaves -->
+  <g fill="#2B9348">
+    <path d="M150,200 Q160,180 180,190 Q170,210 150,200 Z"/>
+    <path d="M380,220 Q390,200 410,210 Q400,230 380,220 Z"/>
+    <path d="M290,350 Q300,330 320,340 Q310,360 290,350 Z"/>
+  </g>
+  
+  <!-- Light reflections -->
+  <path d="M150,150 Q256,100 362,150" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="4"/>
+  <path d="M120,256 Q256,206 392,256" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+</svg>

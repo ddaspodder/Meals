@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1066" viewBox="0 0 1600 1066" role="img" aria-label="Lemon Herb Chicken">
+  <defs>
+    <linearGradient id="bg3" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fffdf8"/>
+      <stop offset="100%" stop-color="#f7f1e8"/>
+    </linearGradient>
+    <radialGradient id="chickenGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffd8a3"/>
+      <stop offset="100%" stop-color="#e6a85a"/>
+    </radialGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bg3)"/>
+
+  <g transform="translate(0,50)">
+    <!-- plate -->
+    <ellipse cx="800" cy="570" rx="480" ry="260" fill="#fff" stroke="#ebe3d8" stroke-width="6"/>
+    <ellipse cx="800" cy="550" rx="380" ry="180" fill="#fff9f2"/>
+
+    <!-- chicken breast -->
+    <g transform="translate(800,480)" filter="url(#softShadow)">
+      <path d="M-180 -30 C -100 -80, 100 -80, 180 -30 C 220 0, 210 60, 140 90 C 60 120, -40 130, -140 100 C -200 80, -220 20, -180 -30 Z" fill="url(#chickenGrad)" stroke="#c47a3a" stroke-width="3"/>
+
+      <!-- grill lines -->
+      <g stroke="#b86b2b" stroke-width="6" stroke-linecap="round" opacity="0.5">
+        <line x1="-120" y1="30" x2="120" y2="-10"/>
+        <line x1="-100" y1="50" x2="140" y2="10"/>
+      </g>
+
+      <!-- herb sprigs -->
+      <g fill="#4b8b36" transform="translate(-40,-10)">
+        <path d="M0 0 C 10 -8, 20 -8, 30 0 C 24 -2, 20 4, 10 6 C 6 9, 0 6, 0 0 Z"/>
+        <path d="M40 10 C 50 2, 60 2, 70 10 C 64 6, 58 14, 50 16 C 46 19, 40 16, 40 10 Z"/>
+      </g>
+
+      <!-- lemon wedges -->
+      <g transform="translate(160, -10)">
+        <path d="M0 0 L 30 6 A 40 40 0 0 1 -10 36 Z" fill="#fff4d1" stroke="#ffd24d" stroke-width="2"/>
+        <path d="M6 6 L 24 12" stroke="#ffd24d" stroke-width="2" opacity="0.6"/>
+      </g>
+
+      <!-- glaze highlight -->
+      <path d="M-120 0 C -60 -20, 60 -20, 120 0 C 80 10, 0 20, -80 10 Z" fill="#fff5e6" opacity="0.28"/>
+    </g>
+
+    <!-- side garnish: herbs & sauce smear -->
+    <g transform="translate(1020,520)">
+      <path d="M-40 30 C -10 0, 30 -10, 70 0 C 40 20, 10 30, -40 30 Z" fill="#f7dca8" opacity="0.95"/>
+      <g transform="translate(0, -10)" fill="#4b8b36">
+        <path d="M0 0 C 10 -8, 20 -8, 30 0 C 24 -2, 20 4, 10 6 C 6 9, 0 6, 0 0 Z"/>
+        <path d="M-20 6 C -6 2, -2 -2, 8 -4 C -2 0, -10 3, -20 6 Z"/>
+      </g>
+    </g>
+
+    <!-- plate rim -->
+    <ellipse cx="800" cy="570" rx="480" ry="260" fill="none" stroke="#f7efe5" stroke-width="18" opacity="0.6"/>
+  </g>
+
+  <text x="800" y="980" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="36" fill="#7a5b39">Lemon Herb Chicken</text>
+</svg>

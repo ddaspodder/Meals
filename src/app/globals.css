@@ -1,6 +1,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* app-wide design tokens for meals page */
+  --bg: #faf8f6;
+  --card: #ffffff;
+  --muted: #6b6b6b;
+  --accent: #d97706;
+  --radius: 12px;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1066" viewBox="0 0 1600 1066" role="img" aria-label="Veggie Quinoa Bowl">
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7fff6"/>
+      <stop offset="100%" stop-color="#eef7ee"/>
+    </linearGradient>
+    <radialGradient id="bowlGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#fffefc"/>
+      <stop offset="100%" stop-color="#f0f4f2"/>
+    </radialGradient>
+    <filter id="grain" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence baseFrequency="0.8" numOctaves="2" result="noise"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" in2="noise" mode="overlay" opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bg2)"/>
+
+  <!-- bowl -->
+  <g transform="translate(0,60)">
+    <ellipse cx="800" cy="560" rx="460" ry="240" fill="#f9fff8" stroke="#e1e7e4" stroke-width="6"/>
+    <ellipse cx="800" cy="540" rx="360" ry="180" fill="url(#bowlGrad)"/>
+
+    <!-- quinoa (dots) -->
+    <g transform="translate(520,470)">
+      <!-- generate clusters of small circles to simulate quinoa grains -->
+      <g fill="#e6d6b2" stroke="#cdbd98" stroke-width="0.6">
+        <circle cx="60" cy="40" r="4"/>
+        <circle cx="90" cy="60" r="3"/>
+        <circle cx="120" cy="50" r="3.5"/>
+        <circle cx="40" cy="80" r="3"/>
+        <circle cx="200" cy="70" r="4"/>
+        <circle cx="160" cy="50" r="3"/>
+        <circle cx="220" cy="40" r="3.5"/>
+        <circle cx="80" cy="20" r="3"/>
+        <circle cx="140" cy="20" r="3"/>
+        <circle cx="30" cy="30" r="2.5"/>
+      </g>
+
+      <!-- roasted vegetables: sweet potato / pepper / zucchini -->
+      <g>
+        <rect x="40" y="90" width="70" height="38" rx="8" ry="8" fill="#f4a261" stroke="#d07a2d"/>
+        <rect x="120" y="60" width="60" height="28" rx="6" ry="6" fill="#e76f51" stroke="#b84b33"/>
+        <rect x="190" y="80" width="50" height="25" rx="6" ry="6" fill="#6aa24b" stroke="#3f7a2c"/>
+      </g>
+
+      <!-- avocado slice -->
+      <g transform="translate(280,30)">
+        <path d="M0 0 C 30 -10, 70 -10, 100 10 C 70 30, 35 40, 0 20 Z" fill="#9fd39b" stroke="#6fa773"/>
+        <circle cx="60" cy="18" r="18" fill="#7a5a3b"/>
+      </g>
+
+      <!-- greens -->
+      <g transform="translate(150,10)" fill="#3a9a45" opacity="0.95">
+        <path d="M0 0 C 12 -8, 24 -8, 36 0 C 28 -2, 18 4, 8 6 C 4 9, 0 6, 0 0 Z"/>
+        <path d="M-30 -6 C -14 -10, -6 -4, 4 -4 C -6 1, -16 2, -30 -6 Z"/>
+      </g>
+
+      <!-- sesame & lime zest highlights -->
+      <g transform="translate(40,20)" fill="#fff3d9" opacity="0.9">
+        <circle cx="220" cy="20" r="2"/>
+        <circle cx="170" cy="60" r="2"/>
+        <circle cx="40" cy="40" r="1.5"/>
+      </g>
+    </g>
+
+    <!-- bowl rim shading -->
+    <ellipse cx="800" cy="560" rx="460" ry="240" fill="none" stroke="#eef4ef" stroke-width="18" opacity="0.6"/>
+  </g>
+
+  <text x="800" y="980" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="36" fill="#3f6b45">Veggie Quinoa Bowl</text>
+</svg>
