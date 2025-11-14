@@ -2,38 +2,50 @@ import { getAllMeals } from "@/db/meals";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { Suspense } from "react";
+import Link from "next/link";
 
 async function MealsGrid() {
   const meals = await getAllMeals();
   return (
-    <ul className={styles.grid}>
-      {meals.map((meal) => (
-        <li className={styles.card} key={meal.mealId}>
-          <div className={styles.imageWrapper}>
-            <Image
-              className={styles.image}
-              src={meal.image}
-              alt={meal.title}
-              fill
-              sizes="(max-width: 640px) 100vw, 33vw"
-            />
-          </div>
-
-          <div className={styles.content}>
-            <h2 className={styles.mealTitle}>{meal.title}</h2>
-            <p className={styles.summary}>{meal.summary}</p>
-
-            <div className={styles.meta}>
-              <div className={styles.creator}>{meal.creator}</div>
-              <div className={styles.actions}>
-                <button className={styles.small}>View</button>
-                <button className={styles.btn}>Favorite</button>
+    <div>
+      <h2 className={styles.gridTitle}>Available Meals</h2>
+      <p className={styles.gridDescription}>
+        Explore our delicious meal options below.
+      </p>
+      <Link href="/meals/share" className={styles.shareLink}>
+        Share a Meal
+      </Link>
+      <ul className={styles.grid}>
+        {meals.map((meal) => (
+          <li className={styles.card} key={meal.mealId}>
+            <Link href={`/meals/${meal.slug}`}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  className={styles.image}
+                  src={meal.image}
+                  alt={meal.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                />
               </div>
-            </div>
-          </div>
-        </li>
-      ))}
-    </ul>
+
+              <div className={styles.content}>
+                <h2 className={styles.mealTitle}>{meal.title}</h2>
+                <p className={styles.summary}>{meal.summary}</p>
+
+                <div className={styles.meta}>
+                  <div className={styles.creator}>{meal.creator}</div>
+                  <div className={styles.actions}>
+                    <button className={styles.small}>View</button>
+                    <button className={styles.btn}>Favorite</button>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

@@ -24,6 +24,41 @@
     color: white;
 }
 
+/* Page header for the grid section */
+.gridTitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 8px 0 6px 0;
+    color: white;
+}
+
+.gridDescription {
+    color: var(--muted);
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+/* Small CTA link used to open the share form */
+.shareLink {
+    display: inline-block;
+    margin: 8px 0 18px 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background .15s ease, color .15s ease, transform .12s ease;
+}
+
+.shareLink:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
