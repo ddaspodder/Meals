@@ -2,7 +2,19 @@
 import { submitMeal } from "@/lib/actions";
 import styles from "./page.module.css";
 import { useActionState } from "react";
+import ImagePicker from "@/app/components/ImagePicker";
+import { useFormStatus } from "react-dom";
 
+function SubmitButton({ children }) {
+  const { pending } = useFormStatus();
+
+  return (
+    <button className={styles.button} type="submit" disabled={pending}>
+      {children}
+      {pending && <span className={styles.spinner}></span>}
+    </button>
+  );
+}
 export default function MealsShare() {
   const [formState, formAction] = useActionState(submitMeal, {
     code: "",
@@ -39,14 +51,7 @@ export default function MealsShare() {
           <label className={styles.label} htmlFor="image">
             Image
           </label>
-          <input
-            className={styles.inputFile}
-            id="image"
-            type="file"
-            name="image"
-            required
-            accept="image/jpeg, image/png"
-          />
+          <ImagePicker id="image" name="image" accept="image/jpeg, image/png" />
 
           <label className={styles.label} htmlFor="summary">
             Summary
@@ -92,11 +97,8 @@ export default function MealsShare() {
             required
           />
 
-          <div className={styles.actions}>
-            <button className={styles.button} type="submit">
-              Share Meal
-            </button>
-          </div>
+          <div className={styles.actions}></div>
+          <SubmitButton>Share Meal</SubmitButton>
         </form>
       </main>
     </div>

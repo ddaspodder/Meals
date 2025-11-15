@@ -1,0 +1,54 @@
+/* Styles for ImagePicker component */
+.container {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    width: 300px;
+    flex-wrap: wrap;
+}
+
+.imagePreview {
+    width: 100%;
+    height: 200px;
+    background: #0f0f0f;
+    border: 1px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder {
+    color: #999;
+    font-size: 14px;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.previewImage {
+    object-fit: cover;
+}
+
+.hiddenInput {
+    display: none;
+    width: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #f97316;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    height: 40px;
+}
+
+.button:hover {
+    background: #ea580c;
+}

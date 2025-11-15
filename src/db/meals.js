@@ -13,7 +13,7 @@ async function insertMeal(meal) {
     VALUES (@slug, @title, @summary, @instructions, @image, @creator, @creatorEmail)
   `);
   // fake delay to simulate latency
-  await sleep(2000);
+  await sleep(3000);
   const info = stmt.run(meal);
   return { changes: info.changes, mealId: Number(info.lastInsertRowid) };
 }
